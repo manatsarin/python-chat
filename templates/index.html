@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Push Notifications</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+<body>
+    <h2>Chat System with Push Notifications</h2>
+    
+    <input type="text" id="username" placeholder="Enter your username">
+    <button onclick="login()">Login</button>
+    <button onclick="logout()">Logout</button>
+
+    <h3>Online Users:</h3>
+    <ul id="online-users"></ul>
+
+    <h3>Messages</h3>
+    <div id="chat-box"></div>
+
+    <input type="text" id="recipient" placeholder="Recipient username">
+    <input type="text" id="message" placeholder="Type a message">
+    <button onclick="sendMessage()">Send</button>
+</body>
+</html>
